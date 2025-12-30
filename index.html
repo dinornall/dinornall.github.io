@@ -6,77 +6,87 @@
     <title>Dinor Nallbani Portfolio</title>
     <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Lucide Icons for aesthetic appeal --><script src="https://unpkg.com/lucide@latest"></script>
-    
+   
     <script>
         // Custom Tailwind configuration for theme colors and fonts
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'accent': '#3C475A', // Deep Blue/Gray for a mature, down-to-earth feel
+                        'accent': '#3C475A', // Deep Blue/Gray
                         'primary-dark': '#000000',
                         'primary-light': '#ffffff',
                     },
                     fontFamily: {
-                        'sans': ['Source Sans Pro', 'sans-serif'], 
+                        'sans': ['Source Sans Pro', 'sans-serif'],
                     }
                 }
             }
         }
 
+
         // ----------------------------------------------------------------------
-        // --- 1. PROFILE CONFIGURATION (EASILY CHANGE HEADER TEXT/IMAGE HERE) ---
+        // --- PROFILE CONFIGURATION ---
         // ----------------------------------------------------------------------
         const profileConfig = {
             name: "Dinor Nallbani's Portfolio",
-            tagline: "I am a First-Generation Senior in the Commonwealth Honors College at the University of Massachusetts Amherst.",
+            tagline: "First-Generation Senior in the Commonwealth Honors College at the University of Massachusetts Amherst.",
             description: "Pursuing a double major in Mechanical Engineering and Industrial Engineering and an Engineering Management Minor.",
-            headshotImage: "images/banner.jpg", // NEW: Set your actual image here
+            headshotImage: "images/banner.jpg",
             headshotPlaceholder: "Professional Headshot",
         };
-        // ----------------------------------------------------------------------
-        // --- END PROFILE CONFIGURATION ---
-        // ----------------------------------------------------------------------
+
 
         // ----------------------------------------------------------------------
-        // --- CORE PROJECT DATA STRUCTURE: ADD, EDIT, OR REMOVE PROJECTS HERE! ---
+        // --- CORE PROJECT DATA ---
         // ----------------------------------------------------------------------
         const projectsData = [
-            // --- INSTRUCTIONS FOR ADDING A NEW PROJECT ---
-            // 1. Copy one of the project blocks below.
-            // 2. Increment the 'id' number (e.g., if the last is 9, make the new one 10).
-            // 3. Update the 'title', 'description', and 'placeholder'.
-            // 4. For 'image', use the file path (e.g., "images/new_project.jpg") 
-            //    OR use "" (empty string) if you want the description text fallback.
-            // 5. Update 'links' array for downloadable files or external websites.
+            {
+                id: 10,
+                title: "UMass Robotics Quadruped",
+                date: "Fall 2024 - Spring 2025",
+                image: "images/spotlight10.png",
+                gallery: ["images/spotlight10.png", "images/spotlight10.jpg"],
+                placeholder: "Robot Dog CAD",
+                description: "This year, I have been working on the UMass Robotics Research team as the Mechanical Subteam Lead for our quadruped robot project. I am responsible for overseeing the mechanical design and development of the robot, ensuring all components are well-integrated and function as intended. This role involves coordinating with the electrical and computer subteams, as well as managing timelines and fostering communication within my own team. We are using Onshape to collaboratively design the robot, allowing every member to simultaneously and efficiently contribute to the CAD model. I have applied valuable lessons from last year's humanoid project to this new challenge, focusing on effective teamwork, providing a learning experience for all members, and ensuring no single person is overburdened. Thus far, our robot dog has gone through several design iterations to reach its current state. These iterations addressed various challenges, including clearance issues, general design improvements, and a mini weight crisis where I discovered—after performing hand calculations and assembling the full CAD model—that our initial design was likely too heavy and large. We also performed FEA to ensure the body was structurally sound. It has been an incredible experience leading the mechanical subteam through the design and prototyping phases, and next semester we plan to focus on assembly, testing, and the core robotics research aspects of the project.",
+                links: []
+            },
             {
                 id: 0,
                 title: "Mechanical Engineering Research Assistant",
+                date: "Fall 2024 - Spring 2025",
                 image: "images/spotlight1.png",
+                gallery: ["images/spotlight1.png", "images/spotlight1_1.jpg"],
                 placeholder: "Hydrofoil Research",
-                description: "For a research collaboration with the National Renewable Energy Lab (NREL), I am designing a hydrofoil model in Onshape to suspend it in a wave-current tank. My work focuses on examining the effect heave and pitch have on force generation. As of now the model is the main focus of the project, but starting next semester my tasks will entail calibrating flow, testing the foil at varying conditions, and analyzing data using MATLAB.",
+                description: "For a research collaboration with the National Renewable Energy Lab (NREL), I worked to design and manufacture a hydrofoil model in Onshape to suspend it in a wave-current tank. My work focused on physically producing a model that attaches to a load cell to examine the effect heave and pitch have on force generation. This project involved CAD design, FEA analysis, as well as hands-on manufacturing. The foil has been successfully fabricated since then and handed off to the team for testing!",
                 links: []
             },
             {
                 id: 1,
                 title: "UMass Robotics Humanoid Project",
+                date: "Fall 2024 - Spring 2025",
                 image: "images/spotlight2.png",
+                gallery: ["images/spotlight2.png", "images/spotlight2_1.jpg"],
                 placeholder: "Robotic Arm CAD",
-                description: "I am collaborating with a team of students to develop a 6 Degree-of-Freedom robotic arm using cable-driven systems. I am working on the design and analysis of the elbow joint portion of the arm using Solidworks and Onshape, performing hand-calculations, and independently researching cable-driven system literature.",
+                description: "I collaborated with a team of students to develop a 6 Degree-of-Freedom robotic arm using cable-driven systems. I personally worked on the design and analysis of the elbow joint portion of the arm using Solidworks and Onshape, performing hand-calculations, and independently researching cable-driven system literature. While we were not able to complete the project before the end of the semester, I was able to gain incredibly valuable experience in collaborative engineering, CAD design, and robotics in general. Towards the end of the project, I even spent lots of time in the makerspace working on 3D printing and machining parts for the humanoid. An important lesson I learned from this project is the importance of weight in robotic systems. Our design ended up being too heavy and bulky for the motors we had selected, limiting the humanoid's motion. I look forward to applying this lesson (along with others) in future robotics projects!",
                 links: []
             },
             {
                 id: 2,
                 title: "ASME Mechatronics Team (IAM3D)",
-                image: "images/spotlight3.png",
+                date: "Fall 2024 - Spring 2025",
+                image: "images/spotlight3.jpg",
+                gallery: ["images/spotlight3.jpg", "images/spotlight3_1.png", "images/spotlight3.png"],
                 placeholder: "FPV Drone CAD",
-                description: "I am contributing to the payload delivery system subteam of a team project designing and building an FPV drone for the IAM3D competition, adhering to design and safety constraints with a focus on additive manufacturing. We are utilizing SolidWorks, FEA, Altair, and 3D printing to optimize the drone's airframe for lightweight fabrication, and practice iterative design. As part of the payload system, our goal is to ensure quick and simple payload pickup therefore enhancing the drone's competitive performance. This project developed my skills in collaborative engineering, CAD design, simulation analysis, additive manufacturing, and system integration within a competitive context.",
+                description: "I contributed to the payload delivery system subteam of a team project designing and building an FPV drone for the IAM3D competition, adhering to design and safety constraints with a focus on additive manufacturing. We are utilizing SolidWorks, FEA, Altair, and 3D printing to optimize the drone's airframe for lightweight fabrication, and practice iterative design. As part of the payload system, our goal is to ensure quick and simple payload pickup therefore enhancing the drone's competitive performance. This project developed my skills in collaborative engineering, CAD design, simulation analysis, additive manufacturing, and system integration within a competitive context.  The red CAD model shown is the final design for the payload delivery system, and the other model shows one of our first prototypes. Our team competed in the ASME IAM3D competition in May 2025, and we placed 2nd overall!",
                 links: [{ text: "Learn More about the competition", href: "https://efests.asme.org/competitions/asme-innovative-additive-manufacturing-3d-challeng" }]
             },
             {
                 id: 3,
                 title: "Ultralight Multifunctional Bike Wrench",
+                date: "Fall 2024",
                 image: "images/wrench.jpg",
+                gallery: ["images/wrench.jpg","images/wrench1.png", "images/wrench2.png"],
                 placeholder: "Wrench FEA",
                 description: "I worked in a group to design a lightweight wrench using CAD and FEA (Ansys), refining the design to achieve target strength-to-weight ratios. The fabrication of the wrench involved milling, drilling, and finishing aluminum stock to manufacture the wrench. The wrench was able to survive functional tests that verify the wrench's ability to tighten bolts to specified torque values without failure. We then had to create a write-up detailing our thought process during the design, analysis, and manufacturing of the wrench.",
                 links: [{ text: "The Write-up", href: "write-up.pdf" }]
@@ -84,6 +94,7 @@
             {
                 id: 4,
                 title: "Obstacle Avoiding Smart Car",
+                date: "Fall 2024",
                 image: "images/spotlight5.jpg",
                 placeholder: "Smart Car Arduino",
                 description: "I worked on an autonomous smart car by programming an Arduino Uno microcontroller for movement and maneuvering based on sensor input. I integrated distance sensors and implement collision-avoidance algorithms, enabling the car to avoid obstacles. The car was programmed to move forward when there was nothing directly in front of it, and turn when something was. This allowed the car to (for the most part) avoid obstacles that were in its way.",
@@ -95,7 +106,8 @@
             {
                 id: 5,
                 title: "Solar Cell Manufacturing Design",
-                image: "images/solar_cell.jpg", 
+                date: "Fall 2024",
+                image: "images/solar_cell.jpg",
                 placeholder: "Solar Cell Design",
                 description: "For my Manufacturing Processes class final project, I contributed to a team effort enhancing perovskite solar cell efficiency by replacing glass with aluminum oxynitride (AlON) for superior thermal management. This involved research in AlON's properties, thermal conductivity experiments and the process of manufacturing. We then used this information to write a 3000 word, 20 source paper on the topic.",
                 links: [{ text: "The Paper", href: "solar_cell_project.pdf" }]
@@ -103,7 +115,9 @@
             {
                 id: 6,
                 title: "R4 Solutions Mechanical Engineering Intern",
-                image: "images/spotlight6_1.png",
+                date: "Summer 2024",
+                image: "images/spotlight6_2.png",
+                gallery: ["images/spotlight6_2.png", "images/spotlight6_1.png"],
                 placeholder: "Bike Rack CAD",
                 description: "During my time at R4 Solutions, I designed and modeled a vertical car bike mount with a swiveling head using Onshape, focusing on structural integrity and safety at highway speeds. I performed hand static analysis to ensure strength and durability under various load conditions, working to make sure the bike rack would function safely at highway speeds. I collaborated with a senior engineer to refine the design based on analysis and practical constraints.",
                 links: []
@@ -111,6 +125,7 @@
             {
                 id: 7,
                 title: "Two-Link Arm Dynamic Analysis",
+                date: "Spring 2024",
                 image: "images/spotlight7.png",
                 placeholder: "MATLAB Simulation",
                 description: "This project involved a dynamic analysis of a two-link arm system using MATLAB, demonstrating the motion of the system given some initial conditions. Employing the Lagrangian approach and rotating reference frames, I developed a tutorial outlining the solution process. The analysis was further enhanced by a MATLAB simulation, providing a visual representation of the change in the angles of the arms.",
@@ -119,7 +134,8 @@
             {
                 id: 8,
                 title: "Text Encryption and Decryption",
-                image: "images/cryptography.jpg", 
+                date: "Spring 2023",
+                image: "images/cryptography.jpg",
                 placeholder: "Cryptography Tool",
                 description: "I worked on programming a text encryption and decryption tool in MATLAB, featuring Caesar, Vigenère, and Homophonic ciphers. I further demonstrated my understanding of cryptanalysis by implementing frequency analysis to break an encoded message given by our professor, showcasing proficiency in both implementing and analyzing cryptographic algorithms.",
                 links: [{ text: "View Files", href: "Cryptography.zip" }]
@@ -127,47 +143,46 @@
             {
                 id: 9,
                 title: "Plywood Box Layout Simulation",
-                image: "", // Empty string means no image, will show description text
+                date: "Spring 2023",
+                image: "",
                 placeholder: "Monte Carlo Simulation",
                 description: "This project involves a MATLAB-based Monte Carlo simulation to calculate the cutting efficiency of plywood sheets into boxes of varying sizes, accounting for the saw kerf. The program uses a randomized algorithm to place box parts (sides, top, bottom) on the plywood sheet. By running the simulation 1000 times for each box length and analyzing the maximum number of complete boxes and the resulting waste, the project allows a very good estimate of the relationship between box dimensions and material utilization. Results are presented as plots of maximum box yield and waste area versus box length in two separate graphs.",
                 links: [{ text: "View Code", href: "plywood_box_layout.m" }]
             }
         ];
-        // ----------------------------------------------------------------------
-        // --- END CORE DATA STRUCTURE ---
-        // ----------------------------------------------------------------------
 
 
+
+
+        // ----------------------------------------------------------------------
         // --- 2. DYNAMIC RENDERING AND MODAL LOGIC ---
+        // ----------------------------------------------------------------------
+
 
         function hasValidImage(project) {
-            // Check for image URL presence and exclude known broken/placeholder paths and empty strings
             return project.image && project.image !== "images/solar_cell.jpg" && project.image !== "images/cryptography.jpg" && project.image !== "";
         }
+
 
         function renderProjectGrid() {
             const gridContainer = document.getElementById('project-grid-container');
             if (!gridContainer) return;
 
+
             gridContainer.innerHTML = projectsData.map(project => {
                 const placeholderUrl = `https://placehold.co/600x600/3C475A/ffffff?text=${project.placeholder.replace(/\s/g, '+')}`;
-                
-                // Determine card content based on image availability
+               
                 let cardContent;
-
                 if (hasValidImage(project)) {
-                    // --- Case 1: Image is available (Default Card with Image) ---
                     cardContent = `
-                        <!-- Image Section (takes remaining space) --><div class="flex-grow relative overflow-hidden h-full"> 
-                            <img src="${project.image}" 
-                                 onerror="this.onerror=null;this.src='${placeholderUrl}';" 
-                                 alt="${project.title}" 
-                                 class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.03]"> 
+                        <div class="flex-grow relative overflow-hidden h-full">
+                            <img src="${project.image}"
+                                 onerror="this.onerror=null;this.src='${placeholderUrl}';"
+                                 alt="${project.title}"
+                                 class="w-full h-full object-contain transition duration-300 group-hover:scale-[1.03]">
                         </div>
                     `;
                 } else {
-                    // --- Case 2: Image is not available (Display Description as content) ---
-                    // Enforce max height using H-FULL and restrict vertical space using padding and line-clamp
                     cardContent = `
                         <div class="flex-grow relative overflow-hidden h-full p-4 flex items-center justify-center text-center bg-gray-50 border-t border-gray-200">
                             <div class="h-full w-full flex items-center justify-center">
@@ -179,119 +194,187 @@
                     `;
                 }
 
+
                 return `
-                    <div data-project-id="${project.id}" 
-                         class="cursor-pointer bg-primary-light card-shadow overflow-hidden relative group 
+                    <div data-project-id="${project.id}"
+                         class="cursor-pointer bg-primary-light card-shadow overflow-hidden relative group
                                 border border-primary-dark rounded-3xl"
                          onclick="openModal(${project.id})">
-                        
-                        <!-- Outer container enforcing square shape --><div class="aspect-square flex flex-col">
-                            
-                            <!-- Title Section (Moved to the TOP) --><div class="h-16 flex items-center justify-start px-4 flex-shrink-0 
-                                        bg-primary-light
-                                        border-b border-primary-dark 
-                                        rounded-t-[20px]">
-                                <h3 class="text-lg font-medium text-primary-dark leading-tight line-clamp-2">
-                                    ${project.title}
-                                </h3>
+                        <div class="aspect-square flex flex-col">
+                            <div class="h-16 flex items-center justify-start px-4 flex-shrink-0 bg-primary-light border-b border-primary-dark rounded-t-[20px]">
+                                <h3 class="text-lg font-medium text-primary-dark leading-tight line-clamp-2">${project.title}</h3>
                             </div>
-
-                            <!-- Conditional Content (Image OR Description) -->${cardContent}
-
+                            ${cardContent}
                         </div>
                     </div>
                 `;
             }).join('');
-            
-            // Re-create lucide icons after rendering
             lucide.createIcons();
         }
-        
+       
+        // --- CAROUSEL & MODAL STATE ---
         let currentProjectId = null;
-        
+        let slideIndex = 1;
+
+
+        // Navigation for PROJECTS (Next/Prev Project)
         function changeProject(direction) {
             if (currentProjectId === null) return;
-
             const currentIndex = projectsData.findIndex(p => p.id === currentProjectId);
             let newIndex = currentIndex;
 
-            if (direction === 'next') {
-                newIndex = currentIndex + 1;
-            } else if (direction === 'prev') {
-                newIndex = currentIndex - 1;
-            }
 
-            // --- NAVIGATION CLAMPING LOGIC ---
-            if (newIndex < 0 || newIndex >= projectsData.length) {
-                // Do nothing if we hit the boundary
-                return;
-            }
-            // --- END CLAMPING LOGIC ---
+            if (direction === 'next') newIndex = currentIndex + 1;
+            else if (direction === 'prev') newIndex = currentIndex - 1;
 
 
-            const nextProject = projectsData[newIndex];
-            if (nextProject) {
-                openModal(nextProject.id);
+            if (newIndex < 0 || newIndex >= projectsData.length) return;
+            openModal(projectsData[newIndex].id);
+        }
+
+
+        // Navigation for CAROUSEL SLIDES (Next/Prev Photo)
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (slides.length === 0) return; // No slideshow active
+
+
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+           
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
+            slides[slideIndex-1].style.display = "block";
         }
 
 
         function openModal(id) {
             const project = projectsData.find(p => p.id === id);
             if (!project) return;
-            
-            currentProjectId = id; // Store the current project ID
+           
+            currentProjectId = id;
+            slideIndex = 1; // Reset carousel to first image
+
 
             const modal = document.getElementById('project-modal');
             const modalImageContainer = document.getElementById('modal-image-container');
             const modalImage = document.getElementById('modal-image');
             const modalTextContainer = document.getElementById('modal-text-container');
-            
+           
+            // Elements to populate
             const modalTitle = document.getElementById('modal-title');
+            const modalDate = document.getElementById('modal-date'); // NEW Element
             const modalDescription = document.getElementById('modal-description');
             const modalLinks = document.getElementById('modal-links');
-            
+           
             const prevButton = document.getElementById('modal-prev-button');
             const nextButton = document.getElementById('modal-next-button');
 
-            // Use the new accent color for placeholders
-            const placeholderUrl = `https://placehold.co/800x800/3C475A/ffffff?text=${project.placeholder.replace(/\s/g, '+')}`;
 
-            // Check for valid image and adjust modal layout
-            if (hasValidImage(project)) {
-                // Case 1: Has Image (Split view)
+            // --- CAROUSEL LOGIC ---
+            // 1. Determine if we have a gallery array, otherwise fallback to single image
+            let images = [];
+            if (project.gallery && project.gallery.length > 0) {
+                images = project.gallery;
+            } else if (hasValidImage(project)) {
+                images = [project.image];
+            }
+
+
+            // 2. Build the HTML for Images
+            if (images.length > 0) {
+                // Show Image Container
                 modalImageContainer.classList.remove('hidden', 'md:w-full');
                 modalImageContainer.classList.add('md:w-1/2');
                 modalTextContainer.classList.remove('md:w-full');
                 modalTextContainer.classList.add('md:w-1/2');
-                
+
+
+                let slidesHtml = images.map((imgSrc, index) => {
+                    // CONDITIONAL: Only show counter if there is more than 1 image
+                    const counterHtml = images.length > 1
+                        ? `<div class="absolute top-2 left-2 text-white bg-black/50 px-2 py-1 text-xs rounded z-10">
+                                ${index + 1} / ${images.length}
+                           </div>`
+                        : '';
+
+
+                    return `
+                        <div class="mySlides w-full h-full hidden fade relative">
+                             ${counterHtml}
+                             <img src="${imgSrc}" class="w-full h-full object-contain">
+                        </div>
+                    `;
+                }).join('');
+
+
+                // Add navigation buttons ONLY if more than one image
+                let navHtml = '';
+                if (images.length > 1) {
+                    navHtml = `
+                        <a class="absolute top-1/2 left-2 -translate-y-1/2 text-white bg-black/30 hover:bg-black/60 p-2 rounded-full cursor-pointer z-20 select-none transition" onclick="changeSlide(-1)">
+                            <span data-lucide="chevron-left" class="w-6 h-6"></span>
+                        </a>
+                        <a class="absolute top-1/2 right-2 -translate-y-1/2 text-white bg-black/30 hover:bg-black/60 p-2 rounded-full cursor-pointer z-20 select-none transition" onclick="changeSlide(1)">
+                            <span data-lucide="chevron-right" class="w-6 h-6"></span>
+                        </a>
+                    `;
+                }
+
+
                 modalImage.innerHTML = `
-                    <img src="${project.image}" 
-                         onerror="this.onerror=null;this.src='${placeholderUrl}';" 
-                         alt="${project.title}" 
-                         class="w-full h-full object-cover">
+                    <div class="relative w-full h-full group">
+                        ${slidesHtml}
+                        ${navHtml}
+                    </div>
                 `;
+
+
+                // Initialize the carousel
+                setTimeout(() => showSlides(1), 0);
+
+
             } else {
-                // Case 2: No Image (Full width text view)
+                // No Images at all (Text Only Mode)
                 modalImageContainer.classList.add('hidden', 'md:w-full');
                 modalImageContainer.classList.remove('md:w-1/2');
                 modalTextContainer.classList.add('md:w-full');
                 modalTextContainer.classList.remove('md:w-1/2');
+                modalImage.innerHTML = '';
             }
-            
-            // 1. Populate Text Content
+           
+            // Populate Text Content
             modalTitle.textContent = project.title;
-            modalDescription.innerHTML = project.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Re-add bolding
+           
+            // NEW: Populate Date
+            if (modalDate) {
+                modalDate.textContent = project.date || "";
+            }
 
-            // 2. Populate Links
+
+            modalDescription.innerHTML = project.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+
+            // Populate Links
             if (project.links && project.links.length > 0) {
                 modalLinks.innerHTML = `
                     <h4 class="text-lg font-normal text-primary-dark mb-2 mt-4 border-t border-gray-200 pt-4">Resources</h4>
                     <div class="flex flex-wrap gap-4">
                         ${project.links.map(link => `
                             <a href="${link.href}" target="_blank" class="text-sm font-medium text-accent hover:text-primary-dark transition-colors flex items-center">
-                                ${link.text} 
-                                <span data-lucide="external-link" class="w-4 h-4 ml-1"></span>
+                                ${link.text} <span data-lucide="external-link" class="w-4 h-4 ml-1"></span>
                             </a>
                         `).join('')}
                     </div>
@@ -300,26 +383,17 @@
                 modalLinks.innerHTML = '';
             }
 
-            // 3. Update Navigation Buttons visibility and appearance
+
+            // Project Navigation Buttons (Clamping logic)
             const currentIndex = projectsData.findIndex(p => p.id === id);
-            const totalProjects = projectsData.length;
+            if (currentIndex === 0) prevButton.classList.add('opacity-30', 'pointer-events-none');
+            else prevButton.classList.remove('opacity-30', 'pointer-events-none');
 
-            // Handle Previous Button (Clamped)
-            if (currentIndex === 0) {
-                prevButton.classList.add('opacity-30', 'pointer-events-none');
-            } else {
-                prevButton.classList.remove('opacity-30', 'pointer-events-none');
-            }
 
-            // Handle Next Button (Clamped)
-            if (currentIndex === totalProjects - 1) {
-                nextButton.classList.add('opacity-30', 'pointer-events-none');
-            } else {
-                nextButton.classList.remove('opacity-30', 'pointer-events-none');
-            }
-            
-            // Show buttons only if there is more than one project
-            if (totalProjects > 1) {
+            if (currentIndex === projectsData.length - 1) nextButton.classList.add('opacity-30', 'pointer-events-none');
+            else nextButton.classList.remove('opacity-30', 'pointer-events-none');
+           
+            if (projectsData.length > 1) {
                  prevButton.classList.remove('hidden');
                  nextButton.classList.remove('hidden');
             } else {
@@ -328,56 +402,62 @@
             }
 
 
-            // 4. Display Modal
+            // Show Modal
             modal.classList.remove('hidden');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.classList.add('overflow-hidden'); 
-            
+            document.body.classList.add('overflow-hidden');
             lucide.createIcons();
         }
+
 
         function closeModal() {
             const modal = document.getElementById('project-modal');
             modal.classList.add('hidden');
-            modal.setAttribute('aria-hidden', 'true');
             document.body.classList.remove('overflow-hidden');
             currentProjectId = null;
         }
 
-        // Initialize on load
-        document.addEventListener('DOMContentLoaded', (event) => {
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProfile();
             renderProjectGrid();
-            
-            // --- MODAL BACKDROP CLICK LISTENER ---
+            lucide.createIcons();
+           
             const modalElement = document.getElementById('project-modal');
             modalElement.addEventListener('click', (e) => {
-                // Close modal ONLY if the clicked element is the modal backdrop itself (e.target === modalElement)
-                // This prevents clicks inside the white content box from closing the modal.
-                if (e.target === modalElement) {
-                    closeModal();
-                }
+                if (e.target === modalElement) closeModal();
             });
-            // -------------------------------------
         });
+       
+        // Helper to render profile (same as before)
+        const renderProfile = () => {
+            document.getElementById('profile-name').innerHTML = profileConfig.name;
+            document.getElementById('profile-tagline').innerHTML = profileConfig.tagline;
+            document.getElementById('profile-description').innerHTML = profileConfig.description;
+            const headshotElement = document.getElementById('profile-headshot');
+            headshotElement.src = profileConfig.headshotImage;
+            headshotElement.alt = profileConfig.headshotPlaceholder;
+            headshotElement.onerror = `this.onerror=null;this.src='https://placehold.co/450x450/000000/ffffff?text=${profileConfig.headshotPlaceholder.replace(/\s/g, '+')}';`;
+        };
     </script>
-    
+   
     <style>
         @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600");
+
 
         /* Custom Styles for the classic, light theme look */
         body {
             font-family: 'Source Sans Pro', sans-serif;
             scroll-behavior: smooth;
-            font-weight: 300; 
+            font-weight: 300;
         }
         h1, h2, h3 {
-            font-weight: 400; 
+            font-weight: 400;
         }
         /* Style for the project cards (Slight hover lift, no shadow) */
         .card-shadow {
             transition: transform 0.2s ease;
             transform: scale(1);
-            box-shadow: none; 
+            box-shadow: none;
         }
         .card-shadow:hover {
             transform: translateY(-2px); /* Subtle hover lift */
@@ -423,10 +503,12 @@
 </head>
 <body class="bg-primary-light text-primary-dark">
 
+
     <!-- MAIN CONTENT WRAPPER --><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+
         <!-- 1. INTRO / BANNER SECTION --><section class="bg-primary-light mb-12 p-12 md:p-20 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 border-b border-gray-200">
-            
+           
             <!-- Left Content: Text and Bio --><div class="w-full md:w-3/5">
                 <h1 id="profile-name" class="text-4xl sm:text-5xl font-extrabold tracking-tighter text-primary-dark mb-4">
                     <!-- Dynamic content will be injected here -->
@@ -443,26 +525,29 @@
                 </a>
             </div>
 
+
             <!-- Right Content: Placeholder Image --><div class="w-full md:w-2/5 flex justify-center">
-                <img id="profile-headshot" src="" 
-                     alt="" 
-                     class="rounded-lg shadow-md object-cover w-full max-w-md border-2 border-primary-dark">
+                <img id="profile-headshot" src=""
+                     alt=""
+                     class="rounded-lg shadow-md object-contain w-full max-w-md border-2 border-primary-dark">
             </div>
         </section>
+
 
         <!-- 2. PROJECTS SECTION - START --><section id="projects-section" class="py-12">
             <h2 class="text-3xl font-normal tracking-tight text-primary-dark text-center mb-10">
                 Relevant Experience & Projects
             </h2>
-            
+           
             <!-- PROJECT GRID CONTAINER: Dynamically generated by JS --><div id="project-grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project cards will be injected here by JavaScript --></div>
             <!-- PROJECT GRID CONTAINER: END --></section>
         <!-- PROJECTS SECTION - END --></div>
 
-    <!-- 3. PROJECT DETAIL MODAL (Hidden by default) --><div id="project-modal" aria-hidden="true" 
+
+    <!-- 3. PROJECT DETAIL MODAL (Hidden by default) --><div id="project-modal" aria-hidden="true"
          class="fixed inset-0 hidden bg-primary-dark/80 z-[99] overflow-y-auto">
-        
+       
         <!-- Navigation Buttons --><!-- Added hidden class by default, logic handles visibility --><button id="modal-prev-button" onclick="changeProject('prev')"
                 class="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-primary-light/80 rounded-full text-primary-dark z-50 hover:bg-accent hover:text-primary-light transition-all hidden">
             <span data-lucide="chevron-left" class="w-8 h-8"></span>
@@ -472,36 +557,41 @@
             <span data-lucide="chevron-right" class="w-8 h-8"></span>
         </button>
 
+
         <!-- Modal Content Container --><div class="flex items-center justify-center min-h-screen p-4">
             <div id="modal-content" class="bg-primary-light shadow-2xl w-full max-w-6xl h-auto md:h-[85vh] rounded-xl overflow-hidden relative">
-                
-                <!-- Close Button --><button onclick="closeModal()" 
+               
+                <!-- Close Button --><button onclick="closeModal()"
                         class="absolute top-4 right-4 z-10 text-primary-dark bg-primary-light p-2 rounded-full hover:text-accent transition-colors">
                     <span data-lucide="x" class="w-6 h-6"></span>
                 </button>
-                
+               
                 <!-- Inner Layout: Image (Left) + Text (Right) --><div class="flex flex-col md:flex-row h-full">
-                    
+                   
                     <!-- Left: Image (w-full on mobile, w-1/2 on desktop) --><!-- Added ID and default classes for toggling visibility/width --><div id="modal-image-container" class="w-full md:w-1/2 h-64 md:h-full flex-shrink-0 bg-gray-100">
                          <div id="modal-image" class="w-full h-full">
                             <!-- Image populated by JS --></div>
                     </div>
-                    
+                   
                     <!-- Right: Text Content (w-full on mobile, w-1/2 on desktop) --><!-- Added ID for toggling width --><div id="modal-text-container" class="w-full md:w-1/2 p-6 md:p-10 flex flex-col overflow-y-auto">
-                        
-                        <!-- Title (Top) --><h2 id="modal-title" class="text-3xl font-extrabold tracking-tight mb-4"></h2>
-                        
-                        <!-- Description (Middle) --><p id="modal-description" class="text-base text-gray-700 mb-6 flex-grow leading-relaxed"></p>
-                        
+                       
+                        <h2 id="modal-title" class="text-3xl font-extrabold tracking-tight mb-1"></h2>
+                       
+                        <p id="modal-date" class="text-lg text-accent font-medium mb-4"></p>
+
+
+                        <p id="modal-description" class="text-base text-gray-700 mb-6 flex-grow leading-relaxed"></p>
+                       
                         <!-- Links (Bottom, if applicable) --><div id="modal-links" class="mt-auto pt-4">
                             <!-- Links populated by JS --></div>
+
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+   
     <!-- FOOTER --><footer class="bg-primary-dark text-primary-light mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-sm mb-4 font-light">&copy; 2024 Dinor Nallbani Portfolio. All rights reserved.</p>
@@ -517,7 +607,7 @@
             </div>
         </div>
     </footer>
-    
+   
     <!-- Script to dynamically render profile info and initialize icons --><script>
         document.addEventListener('DOMContentLoaded', (event) => {
             // Function to render profile text from config object
@@ -525,17 +615,18 @@
                 document.getElementById('profile-name').innerHTML = profileConfig.name;
                 document.getElementById('profile-tagline').innerHTML = profileConfig.tagline;
                 document.getElementById('profile-description').innerHTML = profileConfig.description;
-                
+               
                 const headshotElement = document.getElementById('profile-headshot');
                 headshotElement.src = profileConfig.headshotImage;
                 headshotElement.alt = profileConfig.headshotPlaceholder;
                 headshotElement.onerror = `this.onerror=null;this.src='https://placehold.co/450x450/000000/ffffff?text=${profileConfig.headshotPlaceholder.replace(/\s/g, '+')}';`;
             };
 
+
             renderProfile();
             renderProjectGrid();
             lucide.createIcons();
-            
+           
             // --- MODAL BACKDROP CLICK LISTENER ---
             const modalElement = document.getElementById('project-modal');
             modalElement.addEventListener('click', (e) => {
