@@ -144,18 +144,18 @@
                 captions: ["Diagram of the structural dynamics turbine model", "Eigenvalue analysis plot characterizing turbine stability"],
                 desc: "As part of the Commonwealth Honors College at UMass Amherst, part of the curriculum included writing an honors thesis. As my project, I ran a study on the aeroelastic stability of modern offshore wind turbines. I primarily used Python, specifically Jupyter Notebooks and the sympy.physics.mechanics library, to derive, iterate, and simulate multibody models of increasing complexities. The goal of doing so was to identify trends in their structural dynamics and stability. Using those tools, I was able to apply Lagrangian mechanics and the Assumed Modes Method with finite element shape functions to simulate each models' behavior.<br><br>The final model was a 3-DOF system featuring a tilting nacelle, a spinning rotor, and a continuous flexible blade. I iterated on the code architecture to capture the 3D kinematic couplings such as Coriolis and gyroscopic whirling effects. I then translated these nonlinear dynamics into linearized state-space approximations, coordinating with my advising professor to troubleshoot issues and ensure the project aligned with industry-standard analyses. To conclude the work I had completed, I put together an honors manuscript in LaTex (which took forever to write) validating the linearized models against the full non-linear simulations.",
                 links: [{ label: "Honors Thesis", href: "attachments/relevant-experience/thesis.pdf", icon: "fas fa-file-pdf", newTab: true },
-                { label: "GitHub Repo", href: "https://https://github.com/dinornall/Honors-Thesis", icon: "fas fa-code", newTab: true }
+                { label: "GitHub Repo", href: "https://github.com/dinornall/Honors-Thesis", icon: "fas fa-code", newTab: true }
                 ]
             },
             {
                 title: "ASME NASA Lunabotics Team",
                 tag: "Robotics · Structural Analysis · Systems Integration",
                 org: "UMass ASME · Fall 2025 – May 2026",
-                imgs: ["images/relevant-experience/lunabotics-assembly-cad.png", "images/relevant-experience/lunabotics-excavator-assembled.jpg"],
+                imgs: ["images/relevant-experience/lunabotics-assembly-CAD.png", "images/relevant-experience/lunabotics-excavator-assembled.jpg"],
                 captions: ["SolidWorks model of the full assembly", "Assembled Excavator subsystem"],
                 desc: "Moving on from the mechatronics team from the prior year, I joined the Lunabotics team, a more in-depth club aiming to compete in the NASA Lunabotics competition. As a member of the team, I engineered a 6063-T6 aluminum chassis in SolidWorks, taking into consideration the size and geometry of other components, to properly house each part. I oversaw the coming together of all the parts, giving the team their constraints. We were successful in meeting 80kg mass and 1.5x0.75m volume constraints in the CAD and began manufacturing for the competition next year. <br><br>On top of that, I validated the structural integrity of the system via deflection analysis, by hand and using FEA, achieving a 2.0 factor of safety under a 160kg test load. Additionally, I designed 25cm 3D-printed PA6-CF wheels for the vehicle, and led other members on the chassis/integration team to integrate the various subsystems. Finally, once all the CAD designs were complete, I helped manufacture and test the excavator, the first piece of the robot to be completed. The excavator was successfully manufactured and tested, and the team is now working on the rest of the robot for the competition next year.",
                 links: [{label: "NASA Lunabotics Challenge", href: "https://www.nasa.gov/learning-resources/lunabotics-challenge/", icon: "fas fa-rocket", newTab: true },
-                {label: "Excavator Test Video", href: "attachments/relevant-experiencelunabotics-excavator-test.mp4", icon: "fas fa-video", newTab: true}
+                {label: "Excavator Test Video", href: "attachments/relevant-experience/lunabotics-excavator-test.mp4", icon: "fas fa-video", newTab: true}
                 ]
             },
             {
@@ -257,8 +257,8 @@
                 desc: "For my Statistical Quality Control class (MIE 422), I built a predictive model using Python to forecast product quality based on data our professor provided. My main focus was a comparison between a Linear Regression model and a Random Forest Regressor. Residual analysis quickly showed that Linear Regression struggled with the dataset's non-linearities, while the Random Forest handled the complex variables far better. I also ran a feature importance analysis to find the root causes of product defects. While the data shows the Material Transformation Matrix (MTM) as the largest driver, this is not quite correct as the MTM is a metric based on both temperature and pressure, so temperature was found as the primary driver (It technically appears twice). The Random Forest model delivered an better $R^2$ of 0.9999 and a Root Mean Squared Error (RMSE) of 0.09, blowing past the Linear Regression’s $R^2$ of 0.51 and 9.95 RMSE. While it took slightly longer to train (1.28 seconds vs. 0.02 seconds), the large accuracy was worth the trade-off (especially considering I wouldn't have noticed the difference without recording it).",
                 links: [
                     { label: "The Code", href: "attachments/projects/manufacturing-quality-model-code.ipynb", icon: "fas fa-code", newTab: false, download: true },
-                    { label: "The Report", href: "attachments/projects/manufacturing-quality-model-report.pdf", icon: "fas fa-file-pdf", newTab: false },
-                    { label: "The Slides", href: "attachments/projects/manufacturing-quality-model-slides.pptx", icon: "fas fa-file-powerpoint", newTab: false }
+                    { label: "The Report", href: "attachments/projects/manufacturing-quality-model-report.pdf", icon: "fas fa-file-pdf", newTab: true },
+                    { label: "The Slides", href: "attachments/projects/manufacturing-quality-model-slides.pptx", icon: "fas fa-file-powerpoint", newTab: true }
                 ]
             },
             {
@@ -268,7 +268,7 @@
                 captions: ["The manufactured wrench on a scale", "Final CAD model in SolidWorks", "FEA stress distribution under specified load"],
                 desc: "I worked with a group to design and manufacture an ultralight multi-tool wrench from scratch for my Design of Mechanical Components (MIE 313) class. We were tasked with creating a functional tool, meeting weight constraints, and ensuring it worked. The process was extremely iterative, requiring a pipeline of CAD (SolidWorks) and FEA (Ansys) again and again. 8 iterations later, we found a balance and shaved the design down to meet the 35.4 g mass limit while maintaining a 2.79 Factor of Safety (FOS) under a rigorous 170 in-lb load. Once we were happy with our design, we went to the MIE machine shop to build it. We took raw 6061-T6 aluminum stock through the manufacturing process (milling, drilling, and surface finishing). The testing process was the most stressful part of the project, but after testing the wrench to our given torque requirements, we found our design was successful and met all the requirements. The wrench actually bent a little but under the load but didn't break.",
                 links: [
-                    { label: "The Write-up", href: "attachments/projects/ultralight-bike-wrench-writeup.pdf", icon: "fas fa-file-pdf", newTab: false }
+                    { label: "The Write-up", href: "attachments/projects/ultralight-bike-wrench-writeup.pdf", icon: "fas fa-file-pdf", newTab: true }
                 ]
             },
             {
@@ -278,7 +278,7 @@
                 desc: "I built and programmed a smart car powered by an Arduino Uno. This included putting the car togethers, wiring the circuitry onto a breadboard mounted to a chassis, and writing arduino code to process the analog sensor input and translate it into dynamic motor control. As a result, the vehicle can autonomously stop and change direction when (using the integrated ultrasonic distance sensor) an obstacle is detected in front of it.",
                 links: [
                     { label: "The Code", href: "attachments/projects/obstacle-avoiding-smart-car.ino", icon: "fas fa-code", newTab: false, download: true },
-                    { label: "Video", href: "attachments/projects/obstacle-avoiding-smart-car-video.mp4", icon: "fas fa-play-circle", newTab: false }
+                    { label: "Video", href: "attachments/projects/obstacle-avoiding-smart-car-video.mp4", icon: "fas fa-play-circle", newTab: true }
                 ]
             },
             {
@@ -287,7 +287,7 @@
                 icon: "fas fa-solar-panel",
                 desc: "For my Manufacturing Processes class (MIE 375), I collaborated with a team to analyze the manufacturing process for a commercial perovskite solar cell. Our project focused on replacing the standard glass layer with aluminum oxynitride (AlON) to improve thermal management and overall efficiency. We designed an experimental procedure to test AlON's thermal conductivity, power output, mechanical properties, and light transmission, ultimately producing a comprehensive technical paper detailing the press, sinter, and polish manufacturing process.",
                 links: [
-                    { label: "The Paper", href: "attachments/projects/solar-cell-manufacturing-design.pdf", icon: "fas fa-file-pdf", newTab: false }
+                    { label: "The Paper", href: "attachments/projects/solar-cell-manufacturing-design.pdf", icon: "fas fa-file-pdf", newTab: true }
                 ]
             },
             {
