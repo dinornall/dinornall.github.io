@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Dinor Nallbani | Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Portfolio of Dinor Nallbani, Mechanical and Industrial Engineering student at UMass Amherst." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside id="sidebar">
+        <div class="sidebar-inner">
+
+            <div class="sidebar-header">
+                <span class="sidebar-name">Dinor Nallbani</span>
+                <div class="sidebar-contact">
+                    <a href="https://www.linkedin.com/in/dinornallbani/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:dinorn95@gmail.com">Email</a>
+                </div>
+            </div>
+
+            <div class="sidebar-about">
+                <p class="sidebar-list-item">M.S. Electrical & Comp. Engineering | UMass Amherst</p>
+
+                <p class="sidebar-bio" style="margin-top: 1rem;">
+                    Mechanical and Industrial Engineering undergraduate. 
+                    Currently pursuing a Master's in Electrical and Computer Engineering at UMass Amherst.
+                </p>
+            </div>
+
+            <div class="sidebar-photo">
+                <div class="photo-placeholder">
+                    <img src="images/dinor-nallbani-profile.jpg" alt="Dinor Nallbani" />
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <span class="sidebar-nav-title">Education</span>
+
+                <div class="sidebar-education-group">
+                    <div class="sidebar-education-header">
+                        <p class="sidebar-list-item">UMass Amherst</p>
+                        <p class="sidebar-list-item">Expected 2027</p>
+                    </div>
+                    <div class="sidebar-education-details">
+                        <p class="sidebar-list-item">M.S. Electrical & Computer Engineering</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-education-group">
+                    <div class="sidebar-education-header">
+                        <p class="sidebar-list-item">UMass Amherst</p>
+                        <p class="sidebar-list-item">2026</p>
+                    </div>
+                    <div class="sidebar-education-details">
+                        <p class="sidebar-list-item">B.S. Mechanical Engineering</p>
+                        <p class="sidebar-list-item">B.S. Industrial Engineering</p>
+                        <p class="sidebar-list-item" style="font-style: italic;">Engineering Management Minor, Commonwealth Honors College, GPA: 3.9/4</p>
+                    </div>
+                </div>
+
+                <a href="#experience" class="scroll-link">Experience</a>
+
+                <a href="#projects" class="scroll-link">Projects</a>
+            </nav>
+        </div>
+        <a href="attachments/resume/dinor-nallbani-resume.pdf" target="_blank" rel="noopener" class="sidebar-resume">
+            Resume
+        </a>
+    </aside>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main id="main">
+
+        <section id="experience">
+            <div class="section-inner">
+                <h2 class="section-header">Experience</h2>
+                <div class="tiles-grid" id="exp-grid"></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-inner">
+                <h2 class="section-header">Projects</h2>
+                <div class="tiles-grid" id="proj-grid"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== MODAL ===================== -->
+    <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-el">
+        <div class="modal-box" id="modal-box">
+            <button class="modal-close" id="modal-close" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-img-panel" id="modal-img-el"></div>
+            <div class="modal-text-panel">
+                <div class="modal-scroll-area">
+                    <span class="modal-tag" id="modal-tag-el"></span>
+                    <h3 class="modal-title" id="modal-title-el"></h3>
+                    <p class="modal-org" id="modal-org-el"></p>
+                    <p class="modal-desc" id="modal-desc-el"></p>
+                </div>
+                <div class="modal-links" id="modal-links-el"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== DATA + SCRIPTS ===================== -->
+    <script>
+
+        // ============================================================
+        //  PORTFOLIO DATA
+        // ============================================================
+
+        const EXPERIENCE = [
+            {
+                title: "UMass Robotics Quadruped",
+                tag: "Robotics · Mechanical Design · Prototyping",
+                org: "UMass Robotics Research Team · May 2025 – May 2026",
+                imgs: ["images/relevant-experience/quadruped-cad.jpg", "images/relevant-experience/quadruped-body-assembled.jpg", "images/relevant-experience/quadruped-waterjet.jpg", "images/relevant-experience/quadruped-leg-prototype.jpg", "images/relevant-experience/quadruped-v1-cad.png"],
+                captions: ["Final Onshape CAD model of the 12-DOF platform", "The Fully Assembled Body of the Dog", "The Water-jet sheet metal for the legs and body", "First Prototype Leg", "V1 CAD Model of the quadruped"],
+                desc: "I served as the Mechanical Subteam Lead of the Robotics Research Team as part of the UMass Robotics Club. We primarily used Onshape, as well as some SolidWorks for FEA Analysis, to design and iterate through multiple versions of a 12-DOF quadruped.<br><br>In this role, I lead a team of 15 through the design, prototyping, and manufacturing process. This involved designing the body and leg components, sourcing parts, managing timelines, and hands-on work with 3D printers for prototyping, and water jet cutting for load bearing metal components. We continuously iterated on the design to improve structural integrity, while also striving for a strict 25 pound weight limit.<br><br>Beyond the engineering, I also oversaw the biweekly subteam meetings, and coordinated with the electrical and software subteams to ensure the project stayed on track and integrated smoothly across disciplines. By the end of the year, we project was near completion with the body and two legs fully assembled, with the other two legs on their way. The work will continue during the next academic year as the UMass Robotics team plans to assemble and test the quadruped for use in robotics research.",
+                links: [{ label: "The CAD", href: "https://cad.onshape.com/documents/72733d376cd053ba3674c884/w/1ab58c9178ed95fbd2824c68/e/b865fd25e9d8eaa41a6e4d8b", icon: "fas fa-external-link-alt", newTab: true },
+                { label: "Body Documentation", href: "attachments/relevant-experience/quadruped-body-documentation.pdf", icon: "fas fa-file-alt", newTab: true },
+                { label: "Hip Documentation", href: "attachments/relevant-experience/quadruped-hip-documentation.pdf", icon: "fas fa-file-alt", newTab: true },
+                { label: "Leg Documentation", href: "attachments/relevant-experience/quadruped-leg-documentation.pdf", icon: "fas fa-file-alt", newTab: true }
+                ]
+            },
+            {
+                title: "Wind Turbine Aeroelasticity Research",
+                tag: "Research · Multibody Dynamics · Python Modeling",
+                org: "UMass Amherst · Sept. 2025 – May 2026",
+                icon: "fas fa-wind",
+                captions: ["Diagram of the structural dynamics turbine model", "Eigenvalue analysis plot characterizing turbine stability"],
+                desc: "As part of the Commonwealth Honors College at UMass Amherst, part of the curriculum included writing an honors thesis. As my project, I ran a study on the aeroelastic stability of modern offshore wind turbines. I primarily used Python, specifically Jupyter Notebooks and the sympy.physics.mechanics library, to derive, iterate, and simulate multibody models of increasing complexities. The goal of doing so was to identify trends in their structural dynamics and stability. Using those tools, I was able to apply Lagrangian mechanics and the Assumed Modes Method with finite element shape functions to simulate each models' behavior.<br><br>The final model was a 3-DOF system featuring a tilting nacelle, a spinning rotor, and a continuous flexible blade. I iterated on the code architecture to capture the 3D kinematic couplings such as Coriolis and gyroscopic whirling effects. I then translated these nonlinear dynamics into linearized state-space approximations, coordinating with my advising professor to troubleshoot issues and ensure the project aligned with industry-standard analyses. To conclude the work I had completed, I put together an honors manuscript in LaTex (which took forever to write) validating the linearized models against the full non-linear simulations.",
+                links: [{ label: "Honors Thesis", href: "attachments/relevant-experience/thesis.pdf", icon: "fas fa-file-pdf", newTab: true },
+                { label: "GitHub Repo", href: "https://https://github.com/dinornall/Honors-Thesis", icon: "fas fa-code", newTab: true }
+                ]
+            },
+            {
+                title: "ASME NASA Lunabotics Team",
+                tag: "Robotics · Structural Analysis · Systems Integration",
+                org: "UMass ASME · Fall 2025 – May 2026",
+                imgs: ["images/relevant-experience/lunabotics-assembly-cad.png", "images/relevant-experience/lunabotics-excavator-assembled.jpg"],
+                captions: ["SolidWorks model of the full assembly", "Assembled Excavator subsystem"],
+                desc: "Moving on from the mechatronics team from the prior year, I joined the Lunabotics team, a more in-depth club aiming to compete in the NASA Lunabotics competition. As a member of the team, I engineered a 6063-T6 aluminum chassis in SolidWorks, taking into consideration the size and geometry of other components, to properly house each part. I oversaw the coming together of all the parts, giving the team their constraints. We were successful in meeting 80kg mass and 1.5x0.75m volume constraints in the CAD and began manufacturing for the competition next year. <br><br>On top of that, I validated the structural integrity of the system via deflection analysis, by hand and using FEA, achieving a 2.0 factor of safety under a 160kg test load. Additionally, I designed 25cm 3D-printed PA6-CF wheels for the vehicle, and led other members on the chassis/integration team to integrate the various subsystems. Finally, once all the CAD designs were complete, I helped manufacture and test the excavator, the first piece of the robot to be completed. The excavator was successfully manufactured and tested, and the team is now working on the rest of the robot for the competition next year.",
+                links: [{label: "NASA Lunabotics Challenge", href: "https://www.nasa.gov/learning-resources/lunabotics-challenge/", icon: "fas fa-rocket", newTab: true },
+                {label: "Excavator Test Video", href: "attachments/relevant-experiencelunabotics-excavator-test.mp4", icon: "fas fa-video", newTab: true}
+                ]
+            },
+            {
+                title: "Smart Building Specialist Intern",
+                tag: "Internship · Building Automation",
+                org: "Siemens · May 2025 – Aug. 2025",
+                icon: "fas fa-building",
+                imgs: ["images/relevant-experience/siemens-logo.png"],
+                captions: ["On-site HVAC field devices and sensors", "Logic optimization within the Desigo CC management system"],
+                desc: "In the summer of 2025, I interned at Siemens as a Smart Building Specialist within the Smart Buildings division. I primarily used the Desigo CC building management system in order to integrate and manage complex HVAC systems across five different commercial projects in the Greater Boston Area (and Providence, RI).<br><br>In this role, I focused on increasing operational sustainability by programming and optimizing automation logic for over 45 building automation controllers. The goal was to drive a 30% boost in energy efficiency at each location. This involved extensive hands-on field work, where I not only installed but also diagnosed and resolved system reliability issues involved with physical devices, sensors, and actuators.<br><br>Beyond the software side, I often consulted with internal engineering and management teams to address discrepancies in technical drawings and specifications. Many times, I also had talk directly to clients to deliver project updates, service documentation, and to a lesser extent, training for future use. By the end of the 10-week program, my efforts enhanced overall system performance and stability, ensuring safe facility operation (a nice way of saying the air handlers didn't explode) and met efficiency targets.",
+                links: []
+            },
+            {
+                title: "NREL Hydrofoil Research",
+                tag: "Research · Experimental Design · CAD",
+                org: "UMass Amherst & NREL · Sept. 2024 – May 2025",
+                imgs: ["images/relevant-experience/nrel-hydrofoil-cad.png", "images/relevant-experience/nrel-hydrofoil-assembled.jpg", "images/relevant-experience/nrel-wave-current-tank.jpg", "images/relevant-experience/nrel-flow-straightener.jpg"],
+                captions: ["Hydrofoil mounting system CAD model", "Partially assembled hydrofoil system", "Wave-current tank testing setup", "Flow straightener mounting frame"],
+                desc: "In my junior year I worked under UMass ARROW as an undergraduate researcher in which I collaborated with the National Renewable Energy Lab (NREL) on their TEAMER project to evaluate added-mass loads on floating marine hydrokinetic turbines. I designed a hydrofoil mounting mechanism for their wave-current tank. I primarily used Onshape to design the mounting/testing apparatus for a NACA 64024-profile hydrofoil as well as SolidWorks for some simple FEA. The process involved calculating fluid dynamic forces (lift and drag), static loads, and rotational torque requirements in Excel to determine motor holding torque. I engineered a 3-rod internal shaft design, literature based 3x chord length endplate to minimize vortex-induced vibrations, and integrated a Kistler load cell to capture experimental data.<br><br>In this role I managed the Bill of Materials (BOM) and sourced components like timing belts and stepper motors from McMaster-Carr, a new experience for me as an engineering student. I fabricated the components in the campus machine shop where I machined aluminum bar stock, 3d-printed and painted the hydrofoil, and manufactured a custom flow straightener for the wave-current tank. By the end of the year, the system assembly was complete, and the physical components were purchased, machined, and prepped for wave-current tank installation.",
+                links: []
+            },
+            {
+                title: "UMass Robotics Humanoid",
+                tag: "Robotics · CAD · Prototyping",
+                org: "UMass Robotics Team · Sept. 2024 – May 2025",
+                imgs: ["images/relevant-experience/humanoid-Final-cad.png", "images/relevant-experience/humanoid-V1-cad.png", "images/relevant-experience/humanoid-arm-assembled.jpg"],
+                captions: ["Finalized humanoid body CAD design in Onshape", "V1 CAD model", "Assembled humanoid upper arm in the UMass Makerspace"],
+                desc: "As a part of the UMass Robotics Team during my junior year, worked with a group of 10 members on the mechanical engineering subteam of our humanoid project. As the most complicated part of the project, I was part of the design and implementation process of the six DOF arm. My role involved engineering the upper arm mechanism in CAD using Onshape and was my first foray into robotics, that's why the design is so... bulky.<br><br>I engineered a parallel linkage mechanism to bend the elbow while keeping the weight of the motor right next to the axis of rotation. This project wasn't just my introduction to robotics, but also my first experience working on an engineering team, and as such I was able to learn a lot about project management and robotics engineering! Part of the project involved 3D printing and machining parts for the humanoid, which I did in the UMass Makerspace.<br><br>Unfortunately, that's where a lot of this project started to fall apart as the team was not able to meet the timeline for the project and the humanoid was never fully assembled due to finals and other commitments. However, I was able to learn a lot about robotics and mechanical engineering in this project, and I am proud of the work I did on the arm.",
+                links: []
+            },
+            {
+                title: "ASME Mechatronics Team (IAM3D)",
+                tag: "ASME Competition",
+                org: "UMass ASME · Fall 2024 – Spring 2025",
+                imgs: ["images/relevant-experience/iam3d-drone-assembled.jpg", "images/relevant-experience/iam3d-trophy.jpg", "images/relevant-experience/iam3d-gripper-cad.png", "images/relevant-experience/iam3d-gripper-cad-v1.png", "images/relevant-experience/iam3d-drone-crash.jpg"],
+                captions: ["The FPV racing drone ready for flight", "Our second place competition trophy", "The compliant grabber CAD model", "Final Gripper Design", "Mid competition drone crash"],
+                desc: "During my junior year, I joined the ASME Mechatronics Team (IAM3D) where I worked with a team of engineers to develop an FPV racing drone using 3D printing, adhering to the 33cm footprint and 25cm height constraints dictated in the competition rules. My job on the team was to develop a gripper to pick up a 1x1x1 inch cube(picking up more cubes gives more points). The gripper subteam had a group of three members all working together, iterating through multiple design iterations, and we finally decided on a compliant mechanism which can be seen on the full drone. On top of that, I worked to optimize the drone's geometry using Altair Inspire and SolidWorks FEA to reduce mass while meeting load requirements. It led to some really cool natural looking structures.<br><br>We took our drone to the competition in St. Louis, MO where we got the most points for the report we submitted and placed second overalleven though we hit a snag during the competition when our drone collided with another team's drone mid-flight! However, we were able to fix the drone and continue competing.",
+                links: [
+                    { label: "Competition Info", href: "https://www.scribd.com/document/886919019/Iam3d-Drone-Rules-2024-2025-Final", icon: "fas fa-external-link-alt", newTab: true }
+                ]
+            },
+            {
+                title: "Mechanical Engineering Intern",
+                tag: "Internship · CAD",
+                org: "R4 Solutions · May 2024 – August 2024",
+                imgs: ["images/relevant-experience/r4-bike-rack-iso-cad.png", "images/relevant-experience/r4-bike-rack-side-cad.png"],
+                captions: ["Isometric Onshape CAD model of the bike rack", "Side view of the bike rack CAD model"],
+                desc: "During my internship at R4 Solutions, I worked with a senior engineer to develop bike rack components using Onshape, optimizing the geometry for manufacturability. I learned a lot from this experience as it was my first time working on a real-world engineering project. After coming up with a general concept, I validated system durability via hand-calculated static analysis, a habit that I still maintain, ensuring safety under physical load conditions. I also iterated on designs after receiving feedback, translating data and advice into real-world optimizations. A big mistake I made initially was not considering the mounting process, which led to a redesign of the mounting so that commonplace tools would fit and the rack actually be installed. I also learned a lot about the manufacturing process, and how to design for manufacturability. Overall, this internship was a great experience and I learned a lot about mechanical engineering in the real world.",
+                links: []
+            },
+            {
+                title: "Engineering Dean's Advisory Group",
+                tag: "Leadership",
+                org: "UMass Amherst · Fall 2022 – May 2026",
+                icon: "fas fa-university",
+                desc: "For most of my time in undergrad I have been a member of the UMass Engineering Undergraduate Dean's Advisory Group. This is a group of students and faculty members who meet a few times a semester and exchange ideas and feedback on various college of engineering matters. One of those faculty members is the Dean himself, and I, along with other students, participate in discussions on important topics such as college climate, resource allocation, and engineering student support. It's been a pretty cool experience when my schedule lines up and I'm able to attend the meetings, as it felt like I was able to have a voice in the college and make a difference for future students.",
+                links: []
+            }
+        ];
+
+        const PROJECTS = [
+            {
+                title: "TTM F2B Senior Capstone Project",
+                tag: "Industry 4.0 · Computer Vision",
+                imgs: ["images/projects/ttm-capstone-assembly.jpg"],
+                org: "UMass Amherst & TTM Technologies · September 2025 – May 2026",
+                icon: "fas fa-camera",
+                desc: "I was lucky enough to work on a year-long senior design project for industry sponsor TTM Technologies. The aim of the project was to modernize one of TTM's legacy quality control systems. Our team engineered an automated Industry 4.0 computer vision system to inspect the Front-to-Back (F2B) registration of circuit boards, a critical step in the manufacturing process. We developed a high-precision metrology solution capable of measuring target coordinates with a strict tolerance of 0.1 mil (0.0001 inches), providing floor operators with a reliable, streamlined quality-control tool.<br><br>My role was as the team lead, overseeing the project from start to finish meaning I had a hand in every aspect of the project. Starting with the initial research and design, I helped with the vibration and heat analysis of the system, the core mathematics driving our build. Using the values we calculated, we designed the physical mounting table, and the electrical system powering the system given our constraints (3ft x 4ft x 3ft dimensions, and pre-defined computer). I took over the computer vision system from my teammate, programming the contrast-based system to find the dedicated target locations within the strict tolerance requirements. Through many iterations and hours fine tuning I got the system to meet the project's measurement requirements. At the same time, I worked closely with our Systems Lead to integrate the computer vision system in Aurora Design Assistant with the broader Ignition HMI, ensuring seamless communication between the programs using the OPC UA protocol. We also configured Modbus TCP to allow the system to interface with the ethernet switch and other hardware. Finally, I also headed the evaluation and analysis process, ensuring our system functioned as intended.<br><br>By the end of the year, our team delivered a comprehensive system that featured live snapshot polling, a secure engineering \"Admin\" login for discrete system control, and automated data logging via a MySQL database. By using a combination of Python and SQL scripting, measurement values were preserved to the 4th decimal place, maintaining the sub-mil precision requested. The final result provided TTM with a more reliable, data-driven method for handling their manufacturing quality control. We then presented our project at the UMass Amherst Senior Design Expo which was a blast!",
+                links: [{ label: "Demo Video", href: "attachments/projects/F2B-demo.mp4", icon: "fas fa-play-circle", newTab: true },
+                { label: "Capstone Poster", href: "attachments/projects/F2B-poster.pdf", icon: "fas fa-file-pdf", newTab: true },
+                { label: "Capstone Report", href: "attachments/projects/F2B-report.pdf", icon: "fas fa-file-pdf", newTab: true },
+                { label: "Heat Transfer Analysis", href: "attachments/projects/F2B-heat-transfer.pdf", icon: "fas fa-file-pdf", newTab: true },
+                { label: "Vibration Analysis", href: "attachments/projects/F2B-vibration.pdf", icon: "fas fa-file-pdf", newTab: true },
+                { label: "Evaluation", href: "attachments/projects/F2B-evaluation.pdf", icon: "fas fa-file-pdf", newTab: true }
+                ]
+            },
+            {
+                title: "Human Factors Engineering Literature Review",
+                tag: "Research · Human Factors",
+                org: "MIE 360: Human Factors Engineering · February 2026 –May 2026",
+                icon: "fas fa-book-reader",
+                desc: "As part of my Honors Colloquium in Human Factors Engineering, I wrote a comprehensive literature review on the use of Human Factors principles in the design of social media to make platforms more addicting. I further explored the effects of these design choices on adolescent mental health, and how it compares to the effect on adults. The paper synthesizes findings from 14 sources to highlight how  social media design such as infinite scroll, variable rewards, and personalized algorithms exploits dopamine pathways in the brain to grab and keep user attention. The research also shows a disproportionately negative effect on adolescent mental health, with increased rates of anxiety, depression, and poor sleep quality linked to social media use.",
+                links: [
+                    { label: "The Paper", href: "attachments/projects/human-factors-literature-review.pdf", icon: "fas fa-file-pdf", newTab: true }
+                ]
+            },
+            {
+                title: "Orbital Mechanics Simulator",
+                tag: "Python · Physics",
+                imgs: ["images/projects/orbital-mechanics-simulator.png"],
+                captions: ["A simulation of the Sun-Inner Solar System system, showing the trajectories of bodies over time."],
+                desc: "As a fun personal project, I built an orbital mechanics simulator in Python using NumPy and Matplotlib. This came after seeing some instagram reel showing a visualization of orbital mechanics generated by NASA and I thought \"I could do something similar.\", so I did! The project is an N-body simulator that models gravitational interactions between bodies using first-order numerical integration. It was relatively simple to build, but I'm hoping to improve it further. The next phase will hopefully integrate the Skyfield library to pull live orbital data, upgrading the model from a theoretical simulator to a real-world application that can track and predict the positions of celestial bodies.",
+                links: []
+            },
+            {
+                title: "Manufacturing Quality Predictive Model",
+                tag: "Python · Data Science",
+                imgs: ["images/projects/manufacturing-quality-model-overview.png", "images/projects/manufacturing-quality-model-chart-1.png", "images/projects/manufacturing-quality-model-chart-2.png", "images/projects/manufacturing-quality-model-chart-3.png", "images/projects/manufacturing-quality-model-chart-4.png", "images/projects/manufacturing-quality-model-chart-5.png"],
+                desc: "For my Statistical Quality Control class (MIE 422), I built a predictive model using Python to forecast product quality based on data our professor provided. My main focus was a comparison between a Linear Regression model and a Random Forest Regressor. Residual analysis quickly showed that Linear Regression struggled with the dataset's non-linearities, while the Random Forest handled the complex variables far better. I also ran a feature importance analysis to find the root causes of product defects. While the data shows the Material Transformation Matrix (MTM) as the largest driver, this is not quite correct as the MTM is a metric based on both temperature and pressure, so temperature was found as the primary driver (It technically appears twice). The Random Forest model delivered an better $R^2$ of 0.9999 and a Root Mean Squared Error (RMSE) of 0.09, blowing past the Linear Regression’s $R^2$ of 0.51 and 9.95 RMSE. While it took slightly longer to train (1.28 seconds vs. 0.02 seconds), the large accuracy was worth the trade-off (especially considering I wouldn't have noticed the difference without recording it).",
+                links: [
+                    { label: "The Code", href: "attachments/projects/manufacturing-quality-model-code.ipynb", icon: "fas fa-code", newTab: false, download: true },
+                    { label: "The Report", href: "attachments/projects/manufacturing-quality-model-report.pdf", icon: "fas fa-file-pdf", newTab: false },
+                    { label: "The Slides", href: "attachments/projects/manufacturing-quality-model-slides.pptx", icon: "fas fa-file-powerpoint", newTab: false }
+                ]
+            },
+            {
+                title: "Ultralight Multifunctional Bike Wrench",
+                tag: "Manufacturing · FEA",
+                imgs: ["images/projects/ultralight-bike-wrench-scale.jpg", "images/projects/ultralight-bike-wrench-cad.png", "images/projects/ultralight-bike-wrench-fea.png"],
+                captions: ["The manufactured wrench on a scale", "Final CAD model in SolidWorks", "FEA stress distribution under specified load"],
+                desc: "I worked with a group to design and manufacture an ultralight multi-tool wrench from scratch for my Design of Mechanical Components (MIE 313) class. We were tasked with creating a functional tool, meeting weight constraints, and ensuring it worked. The process was extremely iterative, requiring a pipeline of CAD (SolidWorks) and FEA (Ansys) again and again. 8 iterations later, we found a balance and shaved the design down to meet the 35.4 g mass limit while maintaining a 2.79 Factor of Safety (FOS) under a rigorous 170 in-lb load. Once we were happy with our design, we went to the MIE machine shop to build it. We took raw 6061-T6 aluminum stock through the manufacturing process (milling, drilling, and surface finishing). The testing process was the most stressful part of the project, but after testing the wrench to our given torque requirements, we found our design was successful and met all the requirements. The wrench actually bent a little but under the load but didn't break.",
+                links: [
+                    { label: "The Write-up", href: "attachments/projects/ultralight-bike-wrench-writeup.pdf", icon: "fas fa-file-pdf", newTab: false }
+                ]
+            },
+            {
+                title: "Obstacle Avoiding Smart Car",
+                tag: "Arduino · Robotics",
+                imgs: ["images/projects/obstacle-avoiding-smart-car.jpg"],
+                desc: "I built and programmed a smart car powered by an Arduino Uno. This included putting the car togethers, wiring the circuitry onto a breadboard mounted to a chassis, and writing arduino code to process the analog sensor input and translate it into dynamic motor control. As a result, the vehicle can autonomously stop and change direction when (using the integrated ultrasonic distance sensor) an obstacle is detected in front of it.",
+                links: [
+                    { label: "The Code", href: "attachments/projects/obstacle-avoiding-smart-car.ino", icon: "fas fa-code", newTab: false, download: true },
+                    { label: "Video", href: "attachments/projects/obstacle-avoiding-smart-car-video.mp4", icon: "fas fa-play-circle", newTab: false }
+                ]
+            },
+            {
+                title: "Solar Cell Manufacturing Design",
+                tag: "Materials · Research",
+                icon: "fas fa-solar-panel",
+                desc: "For my Manufacturing Processes class (MIE 375), I collaborated with a team to analyze the manufacturing process for a commercial perovskite solar cell. Our project focused on replacing the standard glass layer with aluminum oxynitride (AlON) to improve thermal management and overall efficiency. We designed an experimental procedure to test AlON's thermal conductivity, power output, mechanical properties, and light transmission, ultimately producing a comprehensive technical paper detailing the press, sinter, and polish manufacturing process.",
+                links: [
+                    { label: "The Paper", href: "attachments/projects/solar-cell-manufacturing-design.pdf", icon: "fas fa-file-pdf", newTab: false }
+                ]
+            },
+            {
+                title: "Two-Link Arm Dynamic Analysis",
+                tag: "MATLAB · Dynamics",
+                imgs: ["images/projects/two-link-arm-dynamic-analysis.png"],
+                desc: "I performed a comprehensive dynamic analysis of a two-link arm system using Lagrangian mechanics. The goal was to derive the equations of motion for the system, which involved defining the degrees of freedom (theta1 and theta2) and calculating the position vectors of the center of mass for each arm. I documented the entire derivation process in a step-by-step MATLAB tutorial and built a simulation that visually represents the angular motion of both links based on their initial conditions.",
+                links: [
+                    { label: "The Code", href: "attachments/projects/two-link-arm-dynamic-analysis.m", icon: "fas fa-code", newTab: false, download: true }
+                ]
+            },
+            {
+                title: "Text Encryption and Decryption",
+                tag: "MATLAB · Cryptography",
+                icon: "fas fa-user-secret",
+                desc: "I developed a suite of MATLAB scripts to encipher and decipher text using three classic cryptographic methods: the Caesar, Vigenère, and Homophonic ciphers. After writing functions to successfully encrypt plain text into ASCII format, I took on a \"Grand Challenge\" to decode a professor-encoded message. I wrote a custom script that tested all possible two-letter code words against my Caesar decipher function, eventually breaking the code and revealing the hidden message!",
+                links: [
+                    { label: "View Files", href: "attachments/projects/text-encryption-decryption.zip", icon: "fas fa-file-archive", newTab: false, download: true }
+                ]
+            },
+            {
+                title: "Plywood Box Layout Simulation",
+                tag: "MATLAB · Optimization",
+                icon: "fas fa-th",
+                desc: "To analyze the material yield efficiency of cutting boxes from plywood, I created a Monte Carlo simulation in MATLAB. The script uses a randomized layout algorithm to fit box components onto a standard 96x48 sheet, calculating both the maximum number of boxes produced and the percentage of wasted area for different dimensions. By running the algorithm 1000 times for each box length between 8 and 24 inches, the simulation generates automated data visualizations that allow for the optimization of material usage.",
+                links: [
+                    { label: "View Code", href: "attachments/projects/plywood-box-layout-simulation.m", icon: "fas fa-code", newTab: false, download: true }
+                ]
+            }
+        ];
+
+        // ============================================================
+        //  TILE BUILDER
+        // ============================================================
+        function buildTiles(data, gridId) {
+            var grid = document.getElementById(gridId);
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            data.forEach(function (item) {
+                var btn = document.createElement('button');
+                btn.className = 'tile';
+                btn.setAttribute('type', 'button');
+                btn.addEventListener('click', function () { openModal(item); });
+
+                // Image area
+                var imgWrap = document.createElement('div');
+                imgWrap.className = 'tile-img-wrap';
+
+                if (item.imgs && item.imgs.length) {
+                    var img = document.createElement('img');
+                    img.src = item.imgs[0];
+                    img.alt = item.title;
+                    img.loading = 'lazy';
+                    imgWrap.appendChild(img);
+                } else {
+                    imgWrap.classList.add('tile-img-icon');
+                    var ic = document.createElement('i');
+                    ic.className = item.icon || 'fas fa-layer-group';
+                    imgWrap.appendChild(ic);
+                }
+
+                btn.appendChild(imgWrap);
+
+                // Caption row: title, tag, and arrow
+                var foot = document.createElement('div');
+                foot.className = 'tile-foot';
+
+                var textWrap = document.createElement('div');
+                textWrap.className = 'tile-text-wrap';
+
+                var name = document.createElement('span');
+                name.className = 'tile-name';
+                name.textContent = item.title;
+                textWrap.appendChild(name);
+
+                if (item.tag) {
+                    var tag = document.createElement('span');
+                    tag.className = 'tile-grid-tag';
+                    tag.textContent = item.tag;
+                    textWrap.appendChild(tag);
+                }
+
+                var arrow = document.createElement('span');
+                arrow.className = 'tile-arrow';
+                arrow.innerHTML = '&#8599;';
+
+                foot.appendChild(textWrap);
+                foot.appendChild(arrow);
+                btn.appendChild(foot);
+
+                grid.appendChild(btn);
+            });
+        }
+
+        // ============================================================
+        //  CAROUSEL STATE
+        // ============================================================
+        var carouselImgs = [];
+        var carouselCaps = [];
+        var carouselIdx = 0;
+
+        function renderCarousel(idx) {
+            var imgEl = document.getElementById('modal-img-el');
+            imgEl.innerHTML = '';
+            var wrap = document.createElement('div');
+            wrap.className = 'carousel-img-wrap';
+
+            var img = document.createElement('img');
+            img.src = carouselImgs[idx];
+            img.alt = '';
+            wrap.appendChild(img);
+
+            if (carouselImgs.length > 1) {
+                var prev = document.createElement('button');
+                prev.className = 'carousel-arrow carousel-prev';
+                prev.innerHTML = '<i class="fas fa-chevron-left"></i>';
+                prev.addEventListener('click', function (e) { e.stopPropagation(); carouselStep(-1); });
+                wrap.appendChild(prev);
+
+                var next = document.createElement('button');
+                next.className = 'carousel-arrow carousel-next';
+                next.innerHTML = '<i class="fas fa-chevron-right"></i>';
+                next.addEventListener('click', function (e) { e.stopPropagation(); carouselStep(1); });
+                wrap.appendChild(next);
+
+                var dotsWrap = document.createElement('div');
+                dotsWrap.className = 'carousel-dots';
+                carouselImgs.forEach(function (_, i) {
+                    var dot = document.createElement('button');
+                    dot.className = 'carousel-dot' + (i === idx ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Image ' + (i + 1));
+                    (function (i) { dot.addEventListener('click', function (e) { e.stopPropagation(); carouselGoto(i); }); })(i);
+                    dotsWrap.appendChild(dot);
+                });
+                wrap.appendChild(dotsWrap);
+            }
+
+            imgEl.appendChild(wrap);
+
+            var capText = carouselCaps && carouselCaps[idx] ? carouselCaps[idx] : '';
+            if (capText) {
+                var cap = document.createElement('div');
+                cap.className = 'carousel-caption';
+                cap.textContent = capText;
+                imgEl.appendChild(cap);
+            }
+        }
+
+        function carouselStep(dir) {
+            carouselIdx = (carouselIdx + dir + carouselImgs.length) % carouselImgs.length;
+            renderCarousel(carouselIdx);
+        }
+
+        function carouselGoto(i) {
+            carouselIdx = i;
+            renderCarousel(i);
+        }
+
+        // ============================================================
+        //  MODAL LOGIC
+        // ============================================================
+        var overlay = document.getElementById('modal');
+        var titleEl = document.getElementById('modal-title-el');
+        var tagEl = document.getElementById('modal-tag-el');
+        var orgEl = document.getElementById('modal-org-el');
+        var descEl = document.getElementById('modal-desc-el');
+        var imgEl = document.getElementById('modal-img-el');
+        var linksEl = document.getElementById('modal-links-el');
+
+        imgEl.addEventListener('wheel', function (e) {
+            if (carouselImgs.length <= 1) return;
+            e.preventDefault();
+            var delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+            carouselStep(delta > 0 ? 1 : -1);
+        }, { passive: false });
+
+        function openModal(item) {
+            var box = document.getElementById('modal-box');
+            var imgs = item.imgs && item.imgs.length ? item.imgs : [];
+
+            if (imgs.length > 0) {
+                carouselImgs = imgs;
+                carouselCaps = item.captions && item.captions.length ? item.captions : [];
+                carouselIdx = 0;
+                imgs.forEach(function (src) { var p = new Image(); p.src = src; });
+                imgEl.style.display = '';
+                box.classList.remove('no-image');
+                renderCarousel(0);
+            } else {
+                carouselImgs = [];
+                imgEl.innerHTML = '';
+                imgEl.style.display = 'none';
+                box.classList.add('no-image');
+            }
+
+            tagEl.textContent = item.tag || '';
+            titleEl.textContent = item.title;
+            orgEl.textContent = item.org || '';
+            descEl.innerHTML = item.desc || '';
+            orgEl.style.display = item.org ? '' : 'none';
+
+            linksEl.innerHTML = '';
+            (item.links || []).forEach(function (l) {
+                var a = document.createElement('a');
+                a.className = 'modal-link';
+                a.href = l.href;
+                if (l.newTab) { a.target = '_blank'; a.rel = 'noopener'; }
+                if (l.download) { a.setAttribute('download', ''); }
+                a.innerHTML = '<i class="' + l.icon + '"></i> ' + l.label;
+                linksEl.appendChild(a);
+            });
+
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('modal-close').focus();
+        }
+
+        function closeModal() {
+            overlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+        document.addEventListener('keydown', function (e) { 
+            // Close modal on Escape
+            if (e.key === 'Escape') {
+                closeModal(); 
+            }
+            
+            // Arrow key navigation for the carousel
+            if (overlay.classList.contains('open') && carouselImgs.length > 1) {
+                if (e.key === 'ArrowRight') {
+                    carouselStep(1);
+                } else if (e.key === 'ArrowLeft') {
+                    carouselStep(-1);
+                }
+            }
+        });
+
+        // ============================================================
+        //  SMOOTH SCROLL — scrolls #main container, not the window
+        // ============================================================
+        document.querySelectorAll('.scroll-link').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href').slice(1);
+                var target = document.getElementById(targetId);
+                var main = document.getElementById('main');
+                if (target && main) {
+                    main.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ============================================================
+        //  INIT
+        // ============================================================
+        buildTiles(EXPERIENCE, 'exp-grid');
+        buildTiles(PROJECTS, 'proj-grid');
+
+    </script>
+
+</body>
+
+</html>
