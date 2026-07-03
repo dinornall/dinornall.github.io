@@ -32,7 +32,7 @@
                 <p class="sidebar-list-item">M.S. Electrical & Comp. Engineering | UMass Amherst</p>
 
                 <p class="sidebar-bio" style="margin-top: 1rem;">
-                    Mechanical and Industrial Engineering undergraduate. 
+                    Mechanical and Industrial Engineering undergraduate.
                     Currently pursuing a Master's in Electrical and Computer Engineering at UMass Amherst.
                 </p>
             </div>
@@ -63,7 +63,8 @@
                     <div class="sidebar-education-details">
                         <p class="sidebar-list-item">B.S. Mechanical Engineering</p>
                         <p class="sidebar-list-item">B.S. Industrial Engineering</p>
-                        <p class="sidebar-list-item" style="font-style: italic;">Engineering Management Minor, Commonwealth Honors College, GPA: 3.9/4</p>
+                        <p class="sidebar-list-item" style="font-style: italic;">Engineering Management Minor,
+                            Commonwealth Honors College, GPA: 3.9/4</p>
                     </div>
                 </div>
 
@@ -154,8 +155,8 @@
                 imgs: ["images/relevant-experience/lunabotics-assembly-CAD.png", "images/relevant-experience/lunabotics-excavator-assembled.jpg"],
                 captions: ["SolidWorks model of the full assembly", "Assembled Excavator subsystem"],
                 desc: "Moving on from the mechatronics team from the prior year, I joined the Lunabotics team, a more in-depth club aiming to compete in the NASA Lunabotics competition. As a member of the team, I engineered a 6063-T6 aluminum chassis in SolidWorks, taking into consideration the size and geometry of other components, to properly house each part. I oversaw the coming together of all the parts, giving the team their constraints. We were successful in meeting 80kg mass and 1.5x0.75m volume constraints in the CAD and began manufacturing for the competition next year. <br><br>On top of that, I validated the structural integrity of the system via deflection analysis, by hand and using FEA, achieving a 2.0 factor of safety under a 160kg test load. Additionally, I designed 25cm 3D-printed PA6-CF wheels for the vehicle, and led other members on the chassis/integration team to integrate the various subsystems. Finally, once all the CAD designs were complete, I helped manufacture and test the excavator, the first piece of the robot to be completed. The excavator was successfully manufactured and tested, and the team is now working on the rest of the robot for the competition next year.",
-                links: [{label: "NASA Lunabotics Challenge", href: "https://www.nasa.gov/learning-resources/lunabotics-challenge/", icon: "fas fa-rocket", newTab: true },
-                {label: "Excavator Test Video", href: "attachments/relevant-experience/lunabotics-excavator-test.mp4", icon: "fas fa-video", newTab: true}
+                links: [{ label: "NASA Lunabotics Challenge", href: "https://www.nasa.gov/learning-resources/lunabotics-challenge/", icon: "fas fa-rocket", newTab: true },
+                { label: "Excavator Test Video", href: "attachments/relevant-experience/lunabotics-excavator-test.mp4", icon: "fas fa-video", newTab: true }
                 ]
             },
             {
@@ -513,12 +514,12 @@
 
         document.getElementById('modal-close').addEventListener('click', closeModal);
         overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
-        document.addEventListener('keydown', function (e) { 
+        document.addEventListener('keydown', function (e) {
             // Close modal on Escape
             if (e.key === 'Escape') {
-                closeModal(); 
+                closeModal();
             }
-            
+
             // Arrow key navigation for the carousel
             if (overlay.classList.contains('open') && carouselImgs.length > 1) {
                 if (e.key === 'ArrowRight') {

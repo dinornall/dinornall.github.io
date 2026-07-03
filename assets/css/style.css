@@ -49,7 +49,7 @@ a:hover { opacity: 0.45; }
     position: fixed;
     top: 0; left: 0; bottom: 0;
     width: var(--sidebar-width);
-    border-right: 1px solid var(--border); /* Added dividing line */
+    border-right: 1px solid var(--border); 
     display: flex;
     flex-direction: column;
     background: var(--bg);
@@ -76,7 +76,7 @@ a:hover { opacity: 0.45; }
 .sidebar-name {
     font-family: var(--font-display);
     font-size: 1.75rem;
-    font-weight: 400; /* Decreased thickness */
+    font-weight: 400; 
     letter-spacing: -0.01em;
     color: var(--text);
     line-height: 1.2;
@@ -98,8 +98,8 @@ a:hover { opacity: 0.45; }
 }
 
 .sidebar-contact a:hover {
-    color: var(--text); /* Turns to black */
-    opacity: 1 !important; /* Overrides the default fade */
+    color: var(--text); 
+    opacity: 1 !important; 
 }
 /* ── About ── */
 .sidebar-about {
@@ -209,7 +209,7 @@ a:hover { opacity: 0.45; }
     font-weight: 400;
     color: var(--text-muted);
     padding: 0.1rem 0;
-    cursor: default; /* Keeps the standard mouse pointer instead of the clicking hand */
+    cursor: default;
 }
 
 /* ── Resume bar ── */
@@ -220,8 +220,8 @@ a:hover { opacity: 0.45; }
     color: #ffffff !important;
     text-align: center;
     padding: 1rem 0;
-    margin: 0 1.75rem 1.75rem 1.75rem; /* Creates the floating effect */
-    border-radius: 4px; /* Matches the headshot curvature */
+    margin: 0 1.75rem 1.75rem 1.75rem;
+    border-radius: 4px; 
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.07em;
@@ -247,7 +247,7 @@ a:hover { opacity: 0.45; }
 
 .sidebar-education-details .sidebar-list-item {
     padding-left: 15px;
-    margin-bottom: 0.25px; /* Replaces the old inline styles */
+    margin-bottom: 0.25px; 
 }
 
 
@@ -259,7 +259,6 @@ a:hover { opacity: 0.45; }
     height: 100vh;
     overflow-y: auto;
     background: var(--bg);
-    /* smooth scrolling for the container itself */
     scroll-behavior: smooth;
 }
 
@@ -287,7 +286,6 @@ section {
     margin-bottom: 2.5rem;
 }
 
-/* The tile is a plain button that looks like a card */
 .tile {
     background: none;
     border: none;
@@ -356,7 +354,7 @@ section {
 
 .tile-name {
     font-size: 0.85rem;
-    font-weight: 400; /* Bolded to stand out from the tag */
+    font-weight: 400; 
     color: var(--text);
     line-height: 1.3;
 }
@@ -401,7 +399,7 @@ section {
 
 .modal-box {
     background: #fff;
-    border-radius: 4px; /* Sharpened from 14px to match the Resume button */
+    border-radius: 4px; 
     width: 90vw;
     height: 86vh;
     max-width: 1400px;
@@ -442,12 +440,12 @@ section {
 .modal-img-panel {
     flex: 1;
     position: relative;
-    background: var(--bg); /* Switched from navy to white */
+    background: var(--bg); 
     display: flex;
     flex-direction: column;
     align-items: stretch;
     overflow: hidden;
-    border-left: 1px solid var(--border); /* Adds a clean dividing line */
+    border-left: 1px solid var(--border); 
 }
 .carousel-img-wrap {
     flex: 1;
@@ -468,20 +466,20 @@ section {
     flex-shrink: 0;
     padding: 0.5rem 0.5rem;
     font-size: 0.75rem;
-    color: black; /* Switched to dark text */
+    color: black; 
     text-align: center;
-    background: transparent; /* Removed the dark translucent background */
+    background: transparent; 
     letter-spacing: 0.01em;
-    border-top: 1px solid var(--border); /* Separates caption from image */
+    border-top: 1px solid var(--border); 
 }
 .carousel-arrow {
     position: absolute;
     top: 50%; transform: translateY(-50%);
     width: 38px; height: 38px;
     border-radius: 50%;
-    background: var(--bg); /* White background */
-    border: 1px solid var(--border); /* Clean gray border */
-    color: var(--text); /* Dark icon */
+    background: var(--bg); 
+    border: 1px solid var(--border); 
+    color: var(--text); 
     box-shadow: var(--shadow);
     cursor: pointer;
     display: flex; align-items: center; justify-content: center;
@@ -501,12 +499,12 @@ section {
 .carousel-dot {
     width: 7px; height: 7px;
     border-radius: 50%;
-    background: #d4d4d4; /* Distinct gray against white */
+    background: #d4d4d4; 
     cursor: pointer; border: none; padding: 0;
     transition: background var(--ease), transform var(--ease);
 }
 .carousel-dot.active { 
-    background: var(--text); /* Solid black for active dot */
+    background: var(--text); 
     transform: scale(1.3); 
 }
 .carousel-dot:hover  { background: #999; }
@@ -515,10 +513,10 @@ section {
     position: absolute;
     top: 1rem; right: 1rem;
     width: 34px; height: 34px;
-    background: var(--bg); /* White background */
-    border: 1px solid var(--border); /* Clean gray border */
+    background: var(--bg); 
+    border: 1px solid var(--border); 
     border-radius: 50%;
-    color: var(--text); /* Dark icon */
+    color: var(--text);
     box-shadow: var(--shadow);
     cursor: pointer;
     display: flex; align-items: center; justify-content: center;
@@ -531,16 +529,16 @@ section {
 .modal-tag {
     font-size: 0.75rem; 
     font-weight: 400; 
-    color: var(--text-muted); /* Light gray text */
-    background: transparent; /* Removes the box */
-    padding: 0; /* Removes the inner spacing */
+    color: var(--text-muted);
+    background: transparent; 
+    padding: 0; 
     display: block; 
     margin-bottom: 0.4rem;
 }
 .modal-title {
-    font-family: var(--font-display); /* Matches the section headings */
-    font-size: 1.6rem; /* Slightly increased to balance the lighter font weight */
-    font-weight: 400; /* Decreased from 700 to match the clean aesthetic */
+    font-family: var(--font-display); 
+    font-size: 1.6rem;
+    font-weight: 400; 
     letter-spacing: -0.01em;
     color: var(--text);
     line-height: 1.2;
@@ -622,4 +620,23 @@ section {
     }
     .modal-text-panel { width: 100%; flex-shrink: 0; max-height: 46%; padding: 1.1rem 1.1rem 0; }
     .modal-img-panel  { width: 100%; flex: 1; min-height: 180px; }
+}
+
+/* ── Mobile Navigation Fix ── */
+@media (max-width: 768px) {
+    
+    .sidebar-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: left; 
+        gap: 1.5px; 
+        width: 100%;
+    }
+
+    .sidebar-nav a, 
+    .scroll-link {
+        display: block !important;
+        width: auto; 
+        text-align: left;
+    }
 }
